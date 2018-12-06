@@ -1,0 +1,80 @@
+<html>
+	<head>
+		<title>
+			form标签学习
+		</title>
+		<meta charset="UTF-8"/>
+	</head>
+	<body>
+		<!--
+			form表单标签学习
+			作用：收集并提交用户数据给指定服务器
+			注意：form标签会收集其标签内部的数据
+				action：收集数据提交地址也就是URL
+				method：收集的提交方式
+					get:适合小量数据，表单数据以？号隔开，隔开分割在URL后面，不同的URL以&隔开，不安全
+					post:适合大量数据，安全，隐藏提交
+				注意：表单数据的提交，要提交的表单项必须拥有name属性值，否则不提交
+					提交的表单数据项为键值对，键name属性的值，值为用户书写的数据
+					form表单的数据提交需要依赖于submit提交按钮
+				form表单域标签的使用：
+					文本框：
+						input
+							type：
+								text：收集少量的数据，用户可见
+								password：收集用户的密码，将输入的文本以黑点的形式展现
+								name：数据提交的键
+								value：默认值
+					单选框：
+						input：
+							type：
+								radio:
+							name：属性值相同
+							value：要提交的数据
+							checked：checked使用此属性的单选默认属性值
+					注意：表单数据提交的是表单域标签value的值
+					多选框：
+					input：
+						type：
+						checkbox：
+						name：一个多选框需要相同的name属性值
+					下拉框：
+						select
+							name:将数据提交的键名，必须声明
+							子标签option：一个option标签表示一个下啦选项
+								value：提交的数据
+					文本域：textare：声明一个可以书写大量文字的文本工作区域
+								name：数据提交的键名，js和css也会使用
+								rows：声明文本域的行数
+								crows：声明文本域所谓列数
+					隐藏标签：input
+								type：hidden
+				form标签会在点击提交时，form标签hi将其内部所有form标签中用户书写的数据按method指明的提交方式
+				提交个个体action属性
+		-->
+		<h3>form表单标签学习</h3>
+		<hr />
+		<form action="#" method="post">
+		用户名：<input type="text" name="uname" /><br/>
+		性别：男<input type="radio" name="sex" value="男"/>女<input type="radio"name="sex" value="女"/><br/>
+		密码：<input type="password" name="pwd" /><br/>
+		爱好：<input type="checkbok" /><br/>
+		<input type="checkbok" /><br/>
+		<input type="checkbok" /><br/>
+		<input type="submit" value="登陆" />
+		<select name="address " >
+			<option value="1">北京</option>
+			<option value="2">上海</option>
+			<option value="3">深圳</option>
+			<option value="4" select="selected">合肥</option>
+			
+		</select>
+		文本域：<br/>
+			<textarea name="info"></textarea><br/>
+		普通按钮：<br/>
+			<input type="button" name="" id="普通按钮" value="普通按钮" /><br/>
+			隐藏标签：<br/>
+				<input type="hidden" />
+		</form>
+	</body>
+</html>
